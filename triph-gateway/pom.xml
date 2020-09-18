@@ -13,7 +13,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>tripleH</groupId>
+            <groupId>com.github.zixli</groupId>
             <artifactId>triph-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
