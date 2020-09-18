@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/eureka-client/eureka-client.iml" filepath="$PROJECT_DIR$/eureka-client/eureka-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/triph-auth/triph-auth.iml" filepath="$PROJECT_DIR$/triph-auth/triph-auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/triph-cloud.iml" filepath="$PROJECT_DIR$/triph-cloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/triph-common/triph-common.iml" filepath="$PROJECT_DIR$/triph-common/triph-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/triph-gateway/triph-gateway.iml" filepath="$PROJECT_DIR$/triph-gateway/triph-gateway.iml" />
+    </modules>
+  </component>
+</project>

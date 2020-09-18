@@ -1,0 +1,64 @@
+server:
+  port: 8093
+
+spring:
+  application:
+    name: cloud-gateway
+    redis:
+      host: localhost
+      port: 6379
+      password:
+  cloud:
+    gateway:
+      #      routes:
+      #        #一个请求满足多个路由的断言条件时，请求只会被首个成功匹配的路由转发
+      #        - id: triph-back-route
+      #          order: 0
+      #          uri: lb://triph-back
+      #          predicates:
+      #            - Path=/triph-back/**
+      #          filters:
+      #            - StripPrefix=1
+      #            - name: Hystrix
+      #              args:
+      #                name: fallbackCmdA
+      #                fallbackUri: forward:/fallbackA
+      #      - id: eureka-client-route
+      #        order: 1
+      #        uri: lb://eureka-client
+      #        predicates:
+      #          - Path=/eureka-client/**
+      #        filters:
+      #          - RewritePath=/eureka-client/(?<segment>.*), /$\{segment}
+      discovery:
+        locator:
+          enabled: true # 打开该配置，无需配置路由规则即可转发到其他服务节点
+          lower-case-service-id: true # 通过小写的服务名称进行访问
+  hystrix.command.fallbackCmdA.execution.isolation.thread.timeoutInMilliseconds: 5000
+  hystrix:
+    command:
+      reservation-service:
+        execution:
+          isolation:
+            strategy: THREAD
+            thread:
+              timeoutInMilliseconds: 100000
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/tripleh_auth?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&serverTimezone=PRC&useSSL=false
+    username: root
+    password: 123456
+
+# eureka
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://localhost:8091/eureka/
+
+# log
+logging:
+  level:
+    root: info
