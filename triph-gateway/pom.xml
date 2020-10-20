@@ -13,7 +13,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.github.zixli</groupId>
+            <groupId>com.github.lizixiang</groupId>
             <artifactId>triph-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>

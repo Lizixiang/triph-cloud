@@ -51,7 +51,6 @@ public class ResponseResult {
     /**
      * 操作成功（不带返回值）
      *
-     * @return
      */
     public static ResponseResult SUCCESS() {
         return new ResponseResult(CommonResultCode.SUCCESS);
@@ -60,7 +59,6 @@ public class ResponseResult {
     /**
      * 操作成功（带返回值）
      *
-     * @return
      */
     public static ResponseResult SUCCESS(Object data) {
         return new ResponseResult(CommonResultCode.SUCCESS, data);
@@ -69,7 +67,6 @@ public class ResponseResult {
     /**
      * 操作失败
      *
-     * @return
      */
     public static ResponseResult FAIL() {
         return new ResponseResult(CommonResultCode.FAIL);
@@ -78,7 +75,6 @@ public class ResponseResult {
     /**
      * 操作失败
      *
-     * @return
      */
     public static ResponseResult FAIL(String msg) {
         return new ResponseResult(CommonResultCode.FAIL, msg);
@@ -86,8 +82,7 @@ public class ResponseResult {
 
     /**
      * 操作失败
-     * @param commonResultCode
-     * @return
+     * @param commonResultCode 结果码
      */
     public static ResponseResult FAIL(CommonResultCode commonResultCode) {
         return new ResponseResult(commonResultCode.isSuccess(), commonResultCode.getCode(), commonResultCode.getMessage(), null);
@@ -95,9 +90,8 @@ public class ResponseResult {
 
     /**
      * 操作失败
-     * @param resultCode
-     * @param msg
-     * @return
+     * @param resultCode 结果码
+     * @param msg 错误提示
      */
     public static ResponseResult FAIL(int resultCode, String msg) {
         return new ResponseResult(false, resultCode, msg, null);
