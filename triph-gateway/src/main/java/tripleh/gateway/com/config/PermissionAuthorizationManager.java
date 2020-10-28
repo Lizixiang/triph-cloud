@@ -36,8 +36,9 @@ public class PermissionAuthorizationManager implements ReactiveAuthorizationMana
         permitAll.add("/**/swagger-resources/**");
         permitAll.add("/webjars/**");
         permitAll.add("/doc.html");
-        permitAll.add("/swagger-ui.html");
+        permitAll.add("/**/swagger-ui.html");
         permitAll.add("/**/oauth/**");
+        permitAll.add("/triph-coupon/**");// 优惠券服务
     }
 
     /**

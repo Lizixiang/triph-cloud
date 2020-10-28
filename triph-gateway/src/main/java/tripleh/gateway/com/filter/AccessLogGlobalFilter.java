@@ -44,6 +44,7 @@ public class AccessLogGlobalFilter implements GlobalFilter, Ordered {
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
+        normalMsg.setLength(0);
         ServerHttpRequest request = exchange.getRequest();
         RecorderServerHttpRequestDecorator requestDecorator = new RecorderServerHttpRequestDecorator(request);
         InetSocketAddress address = requestDecorator.getRemoteAddress();
