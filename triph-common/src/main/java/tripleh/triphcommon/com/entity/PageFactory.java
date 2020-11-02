@@ -3,6 +3,7 @@ package tripleh.triphcommon.com.entity;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Builder;
 import lombok.Data;
 import org.apache.commons.lang3.StringUtils;
 
