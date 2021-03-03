@@ -10,10 +10,12 @@ springcloud微服务脚手架
 |triph-gateway | 网关（负责用户认证，鉴权，日志监控，限流，缓存等）|
 
 
-unfinished issues：
-1. 系统增加性能监控平台（APM）
-2. 通过canal监控mysql的binlog日志加入到rocketMq消息并同步到es
-3. 增加Config配置中心
-4. 增加日志检索功能
-5. 增加分布式锁注解
-6. 增加读写分离功能
+# unfinished issues：
+- [ ] 系统增加性能监控平台（APM）
+- [ ] 通过canal监控mysql的binlog日志加入到rocketMq消息并同步到es
+- [ ] 增加Config配置中心
+- [ ] 增加日志检索功能
+- [ ] 增加分布式锁注解
+- [ ] 增加读写分离功能
+- [ ] 集成xxl-job
+- [ ] 增加kafka功能
